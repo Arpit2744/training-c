@@ -1,0 +1,40 @@
+//Q1
+#include <stdio.h>
+int main() {
+    int a = 12, b= 15, c;
+  c=a>b?a:b;
+  //The condition a > b is checked.
+//If the condition is true, the value of a is assigned to c.
+//If the condition is false, the value of b is assigned to c.
+
+  printf("value of c is; %d", c);
+  
+  return 0;
+} 
+//Q2
+#include<stdio.h>
+int main(){
+    int x=10;
+    char y='A';
+    x=x+y;
+    printf("x is = %d", x);
+    return 0;
+}
+//Q3
+  #include<stdio.h>
+int main(){
+    float a=10.5;
+    int b=(int)a;
+    printf("%d", b);
+    
+    return 0;
+}
+//Q4
+#include<stdio.h>
+int main(){
+    int a=10.5;
+    float b=a;
+    printf("%.3f", b);
+    
+    return 0;
+}
