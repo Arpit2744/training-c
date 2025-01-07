@@ -38,3 +38,22 @@ int main(){
     
     return 0;
 }
+
+//syntax:
+    //if(test expression){
+        //statement 1;..... 
+        //......to n}(if true then from this statement block)
+        //statemenr x; (if false then this)
+#include<stdio.h>
+int main(){
+    int n1;
+    printf("enter the number =");
+    scanf("%d",&n1);
+    if(n1/2==0){
+        printf("it is even=%d",n1);
+    }
+        else{
+        printf("it is odd = %d",n1);
+    }
+    return 0;
+}
