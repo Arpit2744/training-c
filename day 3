@@ -1,0 +1,39 @@
+#include <stdio.h>
+int main() {
+int i;
+for(i=1;i<111;++i)
+{
+   printf("%d\n",i);
+}
+return 0;
+}
+#include <stdio.h>
+int main() {
+int i=1;
+do{
+    printf("%d\n",i);
+    i++;
+}
+while(i<66);
+return 0;
+}
+#include <stdio.h>
+int main() {
+int i=1;
+for(i=0; i<100; i++){
+    if(i==10)
+    { break;}
+printf("%d\n",i);
+}
+return 0;
+}
+#include <stdio.h>
+int main() {
+int i=1;
+for(i=0; i<12; i++){
+    if(i==10)
+    { continue;}//only skips particular steps
+printf("%d\n",i);
+}
+return 0;
+}         
