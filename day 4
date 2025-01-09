@@ -1,0 +1,112 @@
+#include <stdio.h>
+void myFunction() {
+    int num = 10;
+    while(num > 12);{
+printf("i just got ball");
+}
+}
+int main(){
+ myFunction();
+return 0;
+} 
+#include <stdio.h>
+void swap(int *x, int *y){ 
+//This function takes two pointers (int *x and int *y) as parameters. Pointers are variables that store the memory addresses of other variables.
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+    
+}
+int main(){
+    int a = 3, b = 2;
+    printf("before swap : a=%d, b=%d\n",a,b);
+    swap(&a,&b);
+    printf("after swap : a=%d, b=%d\n",a,b);
+    
+return 0;
+} 
+
+//without function call
+#include <stdio.h>
+
+int main() {
+    int a = 3, b = 2, temp;
+
+    // Before swap
+    printf("Before swap: a = %d, b = %d\n", a, b);
+
+    // Swap using a temporary variable
+    temp = a;   // Store value of a in temp
+    a = b;      // Assign value of b to a
+    b = temp;   // Assign value of temp (original a) to b
+
+    // After swap
+    printf("After swap: a = %d, b = %d\n", a, b);
+
+    return 0;
+}
+
+
+//XOR SWAP TWO NUMBER
+#include <stdio.h>
+int main() {
+    int a = 2, b = 3;
+    printf("Before swap: a = %d, b = %d\n", a, b);
+    a = a ^ b;
+    /* a = 0000 0010
+    b = 0000 0011
+    a = 0000 0001 (which is 1 in decimal)
+    */
+    //now a = 1
+    b = a ^ b;
+    // same process here  a=1 b=3 after bitwise operation b=2
+    a = a ^ b;
+    //same process here  a=1 b=2 after bitwise operation a=3
+    printf("After swap: a = %d, b = %d\n", a, b);
+    return 0;
+}
+#include <stdio.h>
+void swapWithArithmetic(int *a, int *b) {
+    *a = *a + *b;  
+    *b = *a - *b;  
+    *a = *a - *b;  
+}
+int main() {
+    int a = 3, b = 2;
+    printf("Before swap: a = %d, b = %d\n", a, b);
+    swapWithArithmetic(&a, &b);
+    printf("After swap: a = %d, b = %d\n", a, b);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+// Recursive function to find factorial
+int factorial(int n) {
+    // Base case: factorial of 0 is 1
+    if (n == 0) {
+        return 1;
+    }
+    // Recursive case: factorial of n is n * factorial(n-1)
+    else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int n, result;
+    
+    // Ask user to enter a number
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    
+    // Call the recursive function
+    result = factorial(n);
+    
+    // Print the result
+    printf("Factorial of %d is %d\n", n, result);
+    
+    return 0;
+}
