@@ -1,0 +1,98 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+char str[20];
+int n;
+printf("the is string = \n");
+//scanf("%s", &str); // gap count nhi krta 
+gets(str); // gap count krta
+n = strlen(str);
+printf("%d", n);
+  
+    return 0;
+}
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[20], str1[22];
+    int n, n1, n2;
+
+    printf("Enter the strings: \n");
+    scanf("%s %s", str, str1); // Corrected scanf format
+
+    n = strlen(str);
+    n1 = strlen(str1);
+    n2 = strcmp(str, str1);
+
+    printf("Length of first string: %d\n", n);
+    printf("Length of second string: %d\n", n1);
+    printf("Comparison result: %d\n", n2);
+
+    return 0;
+} 
+//cpy str
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[20], str1[22];
+    int n, n1, n2;
+
+    printf("Enter the strings: \n");
+    scanf("%s %s", &str, &str1); 
+
+    n = strlen(str);
+    n1 = strlen(str1);
+    strcpy(str, str1);
+    
+    printf("Length of first string: %d\n", n);
+    printf("Length of second string: %d\n", n1);
+    printf("Copy result: %s\n", str1);
+
+    return 0;
+}
+#include<stdio.h>
+#include<string.h>
+void reversestr(){
+    char so[50];
+    printf("enter the string: ");
+    scanf("%s", &so);
+    
+    int n = strlen(so);
+    for(int i=0; i<n/2; i++){
+        char bonn = so[i];
+        so[i] = so[n-i-1];
+        so[n-i-1] = bonn;
+    }
+    printf("reverse string is: %s\n", so);
+}
+    int main(){
+        reversestr();
+        return 0;
+    }
+#include<stdio.h>
+#include<string.h>
+void reversestr(){
+    char so[50],bonn[50];
+    printf("enter the string: ");
+    scanf("%s", &so);
+    strcpy(bonn, so);
+    int n = strlen(so);
+    for(int i=0; i<n/2; i++){
+        char bonn = so[i];
+        so[i] = so[n-i-1];
+        so[n-i-1] = bonn;
+    }
+    printf("reverse string is: %s\n", so);
+    if (strcmp(bonn, so) == 0){
+        printf("it is palindrome");
+    }
+    else{
+        printf("not palindrome");
+    }
+}
+    int main(){
+        reversestr();
+        return 0;
+    }
