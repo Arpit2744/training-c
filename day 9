@@ -1,0 +1,133 @@
+#include <stdio.h>
+void bubbleSort(int arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+int main() {
+    int arr[10];
+    int size = sizeof(arr) / sizeof(arr[0]);
+    printf("enter unsorted element : \n");
+    for(int i= 0; i<size; i++){
+    scanf("%d", &arr[i]);
+    }
+    bubbleSort(arr, size);
+    printf("Sorted array: \n");
+    printArray(arr, size);
+    return 0;
+}
+#include<stdio.h>
+#include<string.h>
+struct work{
+    char b;
+};
+void main(){
+    struct work s;
+    s.b=102;
+    printf("%c",s.b);
+}
+#include<stdio.h>
+#include<string.h>
+struct Book {
+    char Title[50];
+    char author[50];
+    char subject[50];
+    int book_id;
+};
+int main(){
+    struct Book book1;
+    strcpy(book1.Title, "chinese egg face like people");
+    strcpy(book1.author, "xichingping");
+    strcpy(book1.subject, "racism");
+    book1.book_id = 3673572;
+    
+    printf("title : %s\n", book1.Title);
+    printf("author : %s\n", book1.author);
+    printf("subject : %s\n", book1.subject);
+    printf("book id : %d\n", book1.book_id);
+    return 0;
+}
+#include<stdio.h>
+#include<string.h>
+struct employe{
+    char name[10];
+    int id;
+    float salary;
+};
+void main(){
+    struct employe emp;
+    strcpy(emp.name, "luffy" );
+    emp.id = 322534;
+    emp.salary = 10000000;
+    printf("name is : %s\n", emp.name);
+    printf("employe id: %d\n", emp.id);
+    printf("employe salary: %f\n", emp.salary);
+}
+#include <stdio.h>
+struct Address {
+    char city[50];
+    int pincode;
+};
+struct Employee {
+    int id;
+    char name[50];
+    struct Address address;
+};
+int main() {
+    struct Employee emp = {14543, "John the don", {"furfuri nagar", 10001}};
+    /* char city[50]: The value "furfuri nagar" is assigned to emp.address.city.
+int pincode: The value 10001 is assigned to emp.address.pincode.*/
+    printf("Employee Details:\n");
+    printf("ID: %d\n", emp.id);
+    printf("Name: %s\n", emp.name);
+    printf("City: %s\n", emp.address.city);
+    printf("Pincode: %d\n", emp.address.pincode);
+
+    return 0;
+}
+#include<stdio.h>
+#include<string.h>
+struct book{
+    int id;
+    char title[50];
+    float price;
+};
+int main(){
+    struct book books = {2134,"dinosaur", 3243.4};
+    printf("ID: %d\n", books.id);
+    printf("Name: %s\n", books.title);
+    printf("price: %f\n", books.price);
+    return 0;
+}
+#include<stdio.h>
+#include<string.h>
+struct book {
+    int id;
+    char title[50]; 
+    float price;
+};
+int main() {
+    struct book books[3] = {
+        {2134, "dinosaur", 3243.4},
+        {2135, "dragon", 1234.5},
+        {2136, "unicorn", 5678.9}
+    };
+    for (int i = 0; i < 3; i++) {
+        printf("ID: %d\n", books[i].id);
+        printf("Name: %s\n", books[i].title);
+        printf("Price: %.2f\n", books[i].price);
+    }
+    return 0;
+}
